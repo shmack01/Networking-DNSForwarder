@@ -50,7 +50,7 @@ Create Windows Server VM for DNS Forwarder in the VNET with the mycompany.com Pr
 
 - Add DNS Forwarder private IP to DNS servers to the VNet(s).  
 
-![DNS Forwarder IP VNET](./images/dnslink.jpg)
+![DNS Forwarder IP VNET](./images/dnsvnet.jpg)
 
 - Restart all servers and download a new VPN device. 
 
@@ -74,6 +74,6 @@ Set App Gateway to point to your App Service for the backend. The App Gateway ba
 
 ## Resources
 
-[Q&A Azure Private DNS Zone Child Zone from On-Prem DNS resolution](https://docs.microsoft.com/en-us/answers/questions/474171/azure-private-dns-zone-child-zone-from-on-prem-dns.html)
+[Q&A: Azure Private DNS Zone Child Zone from On-Prem DNS resolution](https://docs.microsoft.com/en-us/answers/questions/474171/azure-private-dns-zone-child-zone-from-on-prem-dns.html)
 
 [Azure Private Endpoint DNS configuration](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-dns) <br/>
