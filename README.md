@@ -18,7 +18,8 @@ There are two solution:
 The first solution requires on-premise DNS configuration and the second solution requires an A record. Neither will work in this case. Below are the steps to a third solution. 
 
 <br />
-**Environment Overview**
+
+## **Environment Overview**
 - VNET(s) with one subnet specifically for App Gateway, 1 subnet for private endpoints, 1 Gateway subnet, and subnets for other resources.
 - VPN Gateway
 - App Gateway, VM for DNS Forwarder, Privatelink.*  and mycompay.com Private DNS Zones [Private Link DNS Zones](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration). 
@@ -51,8 +52,8 @@ Create Windows Server VM for DNS Forwarder in the VNET with the mycompany.com Pr
 - Restart all servers and download a new VPN device. 
 
 ### On-Prem Machine
-- Clear-DnsClientCache or ipconfig /flushdns
-- Resolve-DnsName -Name ftagovdnsproxy.mycompany.com
+- **Clear-DnsClientCache** or **ipconfig /flushdns**
+- **Resolve-DnsName** -**Name** ftagovdnsproxy.mycompany.com
 
 This should resolve to the private IP address. 
 
@@ -70,5 +71,5 @@ Set App Gateway to point to your App Service for the backend. The App Gateway ba
 
 ## Resources
 
-https://docs.microsoft.com/en-us/answers/questions/474171/azure-private-dns-zone-child-zone-from-on-prem-dns.html <br/>
-https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-dns <br/>
+[Q&A Azure Private DNS Zone - Child Zone from On-Prem DNS resolution](https://docs.microsoft.com/en-us/answers/questions/[Azure Private Endpoint DNS configuration](474171/azure-private-dns-zone-child-zone-from-on-prem-dns.html) <br/>
+https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-dns) <br/>
