@@ -22,9 +22,9 @@ The first solution requires on-premises DNS configuration and the second solutio
 <br />
 
 ## **Environment Overview**
-- VNET(s) with one subnet specifically for App Gateway, 1 subnet for private endpoints, 1 Gateway subnet, and subnets for other resources.
+- VNET(s) with 1 subnet specifically for App Gateway, 1 subnet for private endpoints, 1 Gateway subnet, and subnets for other resources.
 - VPN Gateway
-- App Gateway, VM for DNS Forwarder, Privatelink.*  and mycompay.com Private DNS Zones. [Private Link DNS Zones](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration). 
+- App Gateway, VM for DNS Forwarder, Privatelink.*  and mycompany.com Private DNS Zones. [Private Link DNS Zones](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration). 
 
 <br/>
 
