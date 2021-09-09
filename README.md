@@ -2,10 +2,12 @@
 
 ## Scenario
 
-You would like to access the **Private Link** resources from on-premises without on-premise DNS configuration and using CNAME. 
+How to access the **Private Link** resources from on-premises without on-premise DNS configuration and requiring an A Record. 
 
+<br/>
 
-There are two solution:
+There are two solutions:
+<br/>
 
 **Private Link** - DNS lookup will default to the public endpoint IP address when a query is not originated from within the VNet. [See Docs](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-networking-dns#configuring-dns-forwarding) For Private Link resources, they require an on-premises DNS server with a conditional forwarder configured to the private IP address of the Azure DNS. For environments that require a CNAME record, this IP-Based solution is not applicable. 
 
