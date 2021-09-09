@@ -2,7 +2,7 @@
 
 ## Scenario
 
-How to access the **Private Link** resources from on-premises without on-premise DNS configuration and requiring an A Record. 
+How to access the **Private Link** resources from on-premises without on-premises DNS configuration and requiring an A Record. 
 
 <br/>
 
@@ -17,25 +17,26 @@ There are two solutions:
 
 <br />
 
-The first solution requires on-premise DNS configuration and the second solution requires an A record. Neither will work in this case. Below are the steps to a third solution. 
+The first solution requires on-premises DNS configuration and the second solution requires an A record. Neither will work in this case. Below are the steps to a **third solution**. 
 
 <br />
 
 ## **Environment Overview**
 - VNET(s) with one subnet specifically for App Gateway, 1 subnet for private endpoints, 1 Gateway subnet, and subnets for other resources.
 - VPN Gateway
-- App Gateway, VM for DNS Forwarder, Privatelink.*  and mycompay.com Private DNS Zones [Private Link DNS Zones](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration). 
+- App Gateway, VM for DNS Forwarder, Privatelink.*  and mycompay.com Private DNS Zones. [Private Link DNS Zones](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration). 
 
 <br/>
 
-## mycompany.com Private DNS Zone configuration:
+## Private DNS Zone configuration:
+- Create mycompany.com Private DNS Zone
 - Linked to Vnet(s). 
-- **"Virtual network links"** are Auto-Registration. 
+- **"Virtual network links"** Auto-Registration is enabled. 
 
 ![VNET Link](./images/dnslink.jpg)
 
 ### DNS Forwarder
-Create Windows Server VM for DNS Forwarder in the VNET with the mycompany.com Private DNS Zone. **Optional**: There is also a [Linux solution](https://github.com/Azure/azure-quickstart-templates/tree/master/demos/dns-forwarder). The Private IP will automatically register as an A Record in Private DNS Zone when setting the Auto-Registration when linking to the VNet. 
+Create Windows Server VM for DNS Forwarder in the VNET with the mycompany.com Private DNS Zone. **Optional**: [Linux solution](https://github.com/Azure/azure-quickstart-templates/tree/master/demos/dns-forwarder). The Private IP will automatically register as an A Record in Private DNS Zone when setting the Auto-Registration when linking to the VNet. 
 
 **VM Configuration**:
 - Log into Windows VM and execute command. This can also be installed by custom script extension. 
@@ -73,5 +74,6 @@ Set App Gateway to point to your App Service for the backend. The App Gateway ba
 
 ## Resources
 
-[Q&A Azure Private DNS Zone - Child Zone from On-Prem DNS resolution](https://docs.microsoft.com/en-us/answers/questions/[Azure Private Endpoint DNS configuration](474171/azure-private-dns-zone-child-zone-from-on-prem-dns.html) <br/>
-https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-dns) <br/>
+[Q&A Azure Private DNS Zone Child Zone from On-Prem DNS resolution](https://docs.microsoft.com/en-us/answers/questions/474171/azure-private-dns-zone-child-zone-from-on-prem-dns.html)
+
+[Azure Private Endpoint DNS configuration](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-dns) <br/>
