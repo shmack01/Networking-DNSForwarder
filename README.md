@@ -26,6 +26,13 @@ The first solution requires on-premises DNS configuration and the second solutio
 - VPN Gateway
 - App Gateway, VM for DNS Forwarder, Privatelink.*  and mycompany.com Private DNS Zones. [Private Link DNS Zones](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration). 
 
+
+### Example Architecture Design
+
+
+![Architecture Design](./images/architecture.jpg)
+
+
 <br/>
 
 ## Private DNS Zone configuration:
