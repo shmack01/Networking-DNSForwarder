@@ -32,6 +32,7 @@ The first solution requires on-premises DNS configuration and the second solutio
 
 ![Architecture Design](./images/architecture.jpg)
 
+[View PDF of sample Architecture Design](./images/PoC-Diagram.pdf) 
 
 <br/>
 
